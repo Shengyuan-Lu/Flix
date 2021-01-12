@@ -29,7 +29,6 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hY9-X6-DvU">
                                                     <rect key="frame" x="15" y="10" width="86.666666666666671" height="130"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.20675376030000001" blue="0.1965065922" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="hY9-X6-DvU" secondAttribute="height" multiplier="5:7.5" id="G6c-bg-tK3"/>
                                                     </constraints>
@@ -103,7 +102,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8p-c1-31U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121.53846153846153" y="113.74407582938387"/>
+            <point key="canvasLocation" x="212" y="114"/>
         </scene>
     </scenes>
     <resources>
