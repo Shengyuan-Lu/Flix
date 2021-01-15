@@ -125,7 +125,7 @@
                                     <constraint firstAttribute="width" secondItem="LYZ-ll-sVI" secondAttribute="height" multiplier="5:7.5" id="572-9H-S6N"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keV-hC-q3e">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keV-hC-q3e">
                                 <rect key="frame" x="196" y="403.33333333333331" width="174" height="133.99999999999994"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -232,6 +232,7 @@
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="posterPic" destination="JL1-oc-fHU" id="jNq-aa-Wnl"/>
+                                            <segue destination="Mko-fb-JWf" kind="show" id="ZcP-Fs-EhY"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -275,6 +276,9 @@
             <point key="canvasLocation" x="2168" y="48"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZcP-Fs-EhY"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="bolt.heart.fill" catalog="system" width="128" height="109"/>
         <image name="film.fill" catalog="system" width="128" height="93"/>

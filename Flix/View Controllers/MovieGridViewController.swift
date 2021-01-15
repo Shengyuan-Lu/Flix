@@ -20,6 +20,18 @@ class MovieGridViewController: UIViewController {
         configCollectionView()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Find the selected Movie
+        let cell = sender as! UICollectionViewCell
+        let indexPath = movieCollectionView.indexPath(for: cell)!
+        let movie = moviesArray[indexPath.row]
+        
+        // Pass the selected movie to the detail view controller
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
+    }
+    
     // Get data from the internet and store it in the moviesArray
     func getData() {
         

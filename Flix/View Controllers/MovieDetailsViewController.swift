@@ -36,15 +36,17 @@ class MovieDetailsViewController: UIViewController {
         let bgSize = ["w300", "w780", "w1280", "original"]
         
         // Set the poster image
-        let posterPath = movie["poster_path"] as! String
-        let posterURL = URL(string: baseURL + posterSize[2] + posterPath)
-        posterImageView.layer.shadowRadius = 10
-        posterImageView.af.setImage(withURL: posterURL!)
+        if let posterPath = movie["poster_path"] as? String {
+            let posterURL = URL(string: baseURL + posterSize[2] + posterPath)
+            posterImageView.layer.shadowRadius = 10
+            posterImageView.af.setImage(withURL: posterURL!)
+        }
         
         // Set the bg image
-        let bgPath = movie["backdrop_path"] as! String
-        let bgURL = URL(string: baseURL + bgSize[2] + bgPath)
-        bgImageView.af.setImage(withURL: bgURL!)
+        if let bgPath = movie["backdrop_path"] as? String {
+            let bgURL = URL(string: baseURL + bgSize[2] + bgPath)
+            bgImageView.af.setImage(withURL: bgURL!)
+        }
     }
     
     func setGradient(imageView: UIImageView) -> UIImageView {
