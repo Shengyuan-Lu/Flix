@@ -17,6 +17,8 @@ class MoviesViewController: UIViewController {
         movieTableView.delegate = self
         movieTableView.dataSource = self
         
+        print(moviesArray)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

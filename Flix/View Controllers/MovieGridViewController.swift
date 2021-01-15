@@ -18,6 +18,7 @@ class MovieGridViewController: UIViewController {
         getData()
         
         configCollectionView()
+    
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

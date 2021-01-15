@@ -118,19 +118,30 @@
                                 <rect key="frame" x="0.0" y="88" width="390" height="295.33333333333331"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LYZ-ll-sVI">
-                                <rect key="frame" x="20" y="303.33333333333331" width="156" height="233.99999999999994"/>
-                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LYZ-ll-sVI">
+                                <rect key="frame" x="15" y="303.33333333333331" width="156" height="233.99999999999994"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LYZ-ll-sVI" secondAttribute="height" multiplier="5:7.5" id="572-9H-S6N"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keV-hC-q3e">
-                                <rect key="frame" x="196" y="403.33333333333331" width="174" height="133.99999999999994"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="lU1-sf-yGy">
+                                <rect key="frame" x="186" y="393.33333333333331" width="189" height="128.99999999999994"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keV-hC-q3e">
+                                        <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="81"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xV0-MZ-naU">
+                                        <rect key="frame" x="0.0" y="81" width="36" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Overview" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCZ-kS-2dW">
                                 <rect key="frame" x="20" y="557.33333333333337" width="350" height="183.66666666666663"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -142,26 +153,27 @@
                         <viewLayoutGuide key="safeArea" id="kQ6-ux-TRC"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="keV-hC-q3e" firstAttribute="height" secondItem="LYZ-ll-sVI" secondAttribute="height" constant="-100" id="39L-Lt-zkO"/>
+                            <constraint firstItem="kQ6-ux-TRC" firstAttribute="trailing" secondItem="lU1-sf-yGy" secondAttribute="trailing" constant="15" id="066-wr-XAq"/>
+                            <constraint firstItem="lU1-sf-yGy" firstAttribute="height" secondItem="LYZ-ll-sVI" secondAttribute="height" constant="-105" id="6ek-dR-riz"/>
                             <constraint firstItem="UCc-68-Ti5" firstAttribute="leading" secondItem="kQ6-ux-TRC" secondAttribute="leading" id="8SH-UB-daZ"/>
-                            <constraint firstItem="kQ6-ux-TRC" firstAttribute="trailing" secondItem="keV-hC-q3e" secondAttribute="trailing" constant="20" id="Gll-Ht-OVi"/>
+                            <constraint firstItem="lU1-sf-yGy" firstAttribute="top" secondItem="UCc-68-Ti5" secondAttribute="bottom" constant="10" id="GXM-yi-mP6"/>
                             <constraint firstItem="UCc-68-Ti5" firstAttribute="height" secondItem="zZw-rn-nic" secondAttribute="height" multiplier="0.35" id="Jim-Le-WYx"/>
-                            <constraint firstItem="LYZ-ll-sVI" firstAttribute="leading" secondItem="kQ6-ux-TRC" secondAttribute="leading" constant="20" id="Pqa-UI-mWE"/>
+                            <constraint firstItem="LYZ-ll-sVI" firstAttribute="leading" secondItem="kQ6-ux-TRC" secondAttribute="leading" constant="15" id="Pqa-UI-mWE"/>
                             <constraint firstItem="eCZ-kS-2dW" firstAttribute="top" secondItem="LYZ-ll-sVI" secondAttribute="bottom" constant="20" id="TKF-8D-gDO"/>
                             <constraint firstItem="LYZ-ll-sVI" firstAttribute="width" secondItem="zZw-rn-nic" secondAttribute="width" multiplier="0.4" id="aBi-Z5-91V"/>
-                            <constraint firstItem="keV-hC-q3e" firstAttribute="leading" secondItem="LYZ-ll-sVI" secondAttribute="trailing" constant="20" id="aWL-oj-tr8"/>
                             <constraint firstItem="kQ6-ux-TRC" firstAttribute="trailing" secondItem="eCZ-kS-2dW" secondAttribute="trailing" constant="20" id="d8K-JV-UDn"/>
                             <constraint firstItem="LYZ-ll-sVI" firstAttribute="top" secondItem="UCc-68-Ti5" secondAttribute="bottom" constant="-80" id="jMQ-nr-2kf"/>
                             <constraint firstItem="UCc-68-Ti5" firstAttribute="trailing" secondItem="kQ6-ux-TRC" secondAttribute="trailing" id="kgI-qV-Ws8"/>
                             <constraint firstItem="UCc-68-Ti5" firstAttribute="top" secondItem="kQ6-ux-TRC" secondAttribute="top" id="o6M-mb-AAl"/>
                             <constraint firstItem="kQ6-ux-TRC" firstAttribute="bottom" secondItem="eCZ-kS-2dW" secondAttribute="bottom" constant="20" id="tCm-bt-PNP"/>
-                            <constraint firstItem="keV-hC-q3e" firstAttribute="top" secondItem="UCc-68-Ti5" secondAttribute="bottom" constant="20" id="tz1-sI-gjD"/>
+                            <constraint firstItem="lU1-sf-yGy" firstAttribute="leading" secondItem="LYZ-ll-sVI" secondAttribute="trailing" constant="15" id="uyF-By-gur"/>
                             <constraint firstItem="eCZ-kS-2dW" firstAttribute="leading" secondItem="kQ6-ux-TRC" secondAttribute="leading" constant="20" id="xw0-FJ-Tzv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BKF-J9-hbA"/>
                     <connections>
                         <outlet property="bgImageView" destination="UCc-68-Ti5" id="yhg-F9-LvT"/>
+                        <outlet property="dateLabel" destination="xV0-MZ-naU" id="szp-IS-1Ss"/>
                         <outlet property="overViewTextView" destination="eCZ-kS-2dW" id="wwH-Rl-Rb7"/>
                         <outlet property="posterImageView" destination="LYZ-ll-sVI" id="WAz-lF-aGg"/>
                         <outlet property="superView" destination="zZw-rn-nic" id="lRL-nl-By9"/>
@@ -277,7 +289,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZcP-Fs-EhY"/>
+        <segue reference="KMQ-Vt-ORb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bolt.heart.fill" catalog="system" width="128" height="109"/>
@@ -285,8 +297,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -8,8 +8,12 @@ class MovieDetailsViewController: UIViewController {
     // IBOutlets
     @IBOutlet weak var bgImageView: UIImageView!
     @IBOutlet weak var posterImageView: UIImageView!
+    
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     @IBOutlet weak var overViewTextView: UITextView!
+    
     @IBOutlet var superView: UIView!
     
     override func viewDidLoad() {
@@ -28,6 +32,7 @@ class MovieDetailsViewController: UIViewController {
         // Set the label text and the overview text
         self.titleLabel.text = movie["title"] as? String
         self.overViewTextView.text = movie["overview"] as? String
+        self.dateLabel.text = movie["release_date"] as? String
         
         // Set the base URL
         let baseURL = "https://image.tmdb.org/t/p/"
