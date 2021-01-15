@@ -16,6 +16,8 @@ class MovieGridViewController: UIViewController {
         movieCollectionView.delegate = self
         
         getData()
+        
+        configCollectionView()
     }
     
     // Get data from the internet and store it in the moviesArray
@@ -45,6 +47,18 @@ class MovieGridViewController: UIViewController {
         }
         
         task.resume()
+    }
+    
+    // Config the collectionview layout
+    func configCollectionView() {
+        
+        let layout = movieCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.minimumLineSpacing = 4
+        layout.minimumInteritemSpacing = 4
+        
+        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3
+        layout.itemSize = CGSize(width: width, height: width * 3 / 2)
     }
     
 }
