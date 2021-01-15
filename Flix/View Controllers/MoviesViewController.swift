@@ -6,6 +6,9 @@ class MoviesViewController: UIViewController {
     // Outlets
     @IBOutlet weak var movieTableView: UITableView!
     
+    // Create an empty array of movies
+    var moviesArray = [[String : Any]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -16,8 +19,17 @@ class MoviesViewController: UIViewController {
         
     }
     
-    // Create an empty array of movies
-    var moviesArray = [[String : Any]]()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Find the selected Movie
+        let cell = sender as! UITableViewCell
+        let indexPath = movieTableView.indexPath(for: cell)!
+        let movie = moviesArray[indexPath.row]
+        
+        // Pass the selected movie to the detail view controller
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
+    }
     
     // Get data from the internet and store it in the moviesArray
     func getData() {
@@ -77,6 +89,10 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
         cell.posterPic.af.setImage(withURL: posterURL!)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     
