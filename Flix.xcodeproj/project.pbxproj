@@ -152,10 +152,9 @@
 			buildPhases = (
 				2C2984428A68A0D756AF6456 /* [CP] Check Pods Manifest.lock */,
 				F4A074AE25AD4C3100C168D6 /* Sources */,
-				F4A074AF25AD4C3100C168D6 /* Frameworks */,
 				F4A074B025AD4C3100C168D6 /* Resources */,
+				F4A074AF25AD4C3100C168D6 /* Frameworks */,
 				AC0B4071FB594CC4385337DC /* [CP] Embed Pods Frameworks */,
-				F46AEB4A25AD7D2000E4946B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -250,23 +249,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Flix/Pods-Flix-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		F46AEB4A25AD7D2000E4946B /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
